@@ -1,0 +1,7 @@
+# TeX stuff
+*.log
+*.synctex.gz
+*.aux
+
+# ignore PDFs
+*.pdf
