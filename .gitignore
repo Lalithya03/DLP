@@ -2,6 +2,8 @@
 *.log
 *.synctex.gz
 *.aux
+*.bbl
+*.blg
 
 # ignore PDFs
 *.pdf
