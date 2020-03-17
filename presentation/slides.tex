@@ -1,0 +1,38 @@
+\documentclass[12pt]{beamer}
+\input{./preamble.tex}
+\title{PH}
+\author{PH}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+"Observations of hidden units in large deep neural networks have revealed that human-interpretable concepts sometimes emerge as individual latent variables within those networks"
+
+include introductory network dissection talk because its precursor to GAN dissection but not too much since we covered it in class
+\end{frame}
+
+\begin{frame}
+Three step process:
+\begin{enumerate}
+\item Identify a broad set of concepts (segmentation maps), could be specific objects, textures, colors, etc
+\item Gather hidden variables' response to known concepts
+\item Quantify alignment of hidden variable-concept pairs
+\end{enumerate}
+
+"In a fully interpretable local coding such as a one-hot encoding, each variable will match with exactly one concept"
+
+but partially nonlocal representations learned in interior layers, and emergent concepts often align with a combination of several hidden units
+
+\end{frame}
+
+\begin{frame}
+Perhaps recap the process of gathering activation maps of each unit, determining quantile $P(\alpha_k > T_k) = 0.005$, upscaling low-resolution activation map to input-resolution annotation mask for a concept, thresholding the upscaled activation map by $T_k$, then evaluating against every concept $c$ in the data set, and then intersection over union score (which has more intuitive understanding visually than formulaic, but it is metrically similar to mutual information)
+\end{frame}
+
+Not for presentation, but for project report 
+"The IoU evaluating the quality of the segmentation of a unit is an objective confidence score for interpretability that is comparable across networks."
+
+
+\end{document}
